@@ -335,28 +335,37 @@
 
         function loadAssets() {
             ASSETS = {
-                INTRO_LOGO: 'https://raw.githubusercontent.com/0xilhan/Rialo-Game/2da1177ada1d1e96d6a4502ca46cf689b279de92/Bullet.png',
-                PLAYER: 'https://raw.githubusercontent.com/0xilhan/Rialo-Game/d28d0139c427c24feb1e81d40130f1162a552dad/RialoFighter.png',
-                BULLET: 'https://raw.githubusercontent.com/0xilhan/Rialo-Game/2da1177ada1d1e96d6a4502ca46cf689b279de92/Bullet.png',
-                ENEMY_BULLET: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjIwIiB4PSI3IiB5PSIyIiBmaWxsPSIjZjQ0ZjVhIiByeD0iMyIvPjwvc3ZnPg==',
-                ENEMY_ORACLE: 'https://raw.githubusercontent.com/0xilhan/Rialo-Game/2da1177ada1d1e96d6a4502ca46cf689b279de92/sticker1.png',
-                ENEMY_BRIDGE: 'https://raw.githubusercontent.com/0xilhan/Rialo-Game/2da1177ada1d1e96d6a4502ca46cf689b279de92/sticker2.png',
-                ENEMY_CHAIN: 'https://raw.githubusercontent.com/0xilhan/Rialo-Game/2da1177ada1d1e96d6a4502ca46cf689b279de92/sticker3.png',
-                ENEMY_VALIDATOR: 'https://raw.githubusercontent.com/0xilhan/Rialo-Game/2da1177ada1d1e96d6a4502ca46cf689b279de92/sticker4.png',
-                ENEMY_MEV_BOT: 'https://raw.githubusercontent.com/0xilhan/Rialo-Game/2da1177ada1d1e96d6a4502ca46cf689b279de92/sticker5.png',
-                ENEMY_SILO: 'https://raw.githubusercontent.com/0xilhan/Rialo-Game/2da1177ada1d1e96d6a4502ca46cf689b279de92/sticker6.png',
-                ENEMY_RUG_PULL: 'https://raw.githubusercontent.com/0xilhan/Rialo-Game/2da1177ada1d1e96d6a4502ca46cf689b279de92/sticker7.png',
-                BOSS_ENEMY: 'https://placehold.co/200x200/4c1d95/f5f3ff?text=BOSS',
-                POWERUP_SHIELD: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2JmYjdlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTIgMTJoMTB2MTBMMiAxMnpNMjIgMmgtMTB2MTBsMTAtMTB6TTIgMmgxMHYxMEwyIDJ6TTIyIDIyaC0xMHYtMTBsMTAgMTB6Ii8+PC9zdmc+',
-                POWERUP_RAPID_FIRE: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmE4YWM0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTEzIDJsOCA1djZjMCA1LTggOS04IDlzOC00IDgtOVY3bC04LTUtOCg1djZjMCA1IDggOSA4IDlzOC00IDgtOVY3bC04LTV6Ii8+PC9zdmc+',
-                POWERUP_SCORE_BOOST: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjJjMjU5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTEyIDEzbDggOG0tMTYtOGw4IDhtMC0xNmw4IDhtLTE2LTlsOCA4TTQgNGwxNiAxNiIvPjwvc3ZnPg==',
-                POWERUP_BOMB: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjgzYjAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iNyIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEiLz48cGF0aCBkPSJtMTIgMiA0IDQiLz48L3N2Zz4=',
-                POWERUP_CLONE_ATTACK: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjU5ZTA1IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTMgMTBhOSAzIDAgMCAwIDktOSAzIDkgMCAwIDAtOS05TTMgMjFhOSAzIDAgMCAwIDktOSA5IDYgMCAwIDAtNi05Ii8+PC9zdmc+',
-                MEME_LOW_SCORE: 'https://raw.githubusercontent.com/0xilhan/Rialo-Game/2da1177ada1d1e96d6a4502ca46cf689b279de92/result1.png',
-                MEME_MID_SCORE: 'https://raw.githubusercontent.com/0xilhan/Rialo-Game/2da1177ada1d1e96d6a4502ca46cf689b279de92/result2.png',
-                MEME_HIGH_SCORE: 'https://raw.githubusercontent.com/0xilhan/Rialo-Game/2da1177ada1d1e96d6a4502ca46cf689b279de92/result3%202.png',
-                MEME_BULLET_DEATH: 'https://placehold.co/200x150/000000/ff0000?text=Got+Sniped',
-                EMOJI_CRYING: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Noto_Emoji_v2.0_1f622.svg/1200px-Noto_Emoji_v2.0_1f622.svg.png', // Crying emoji image
+                INTRO_LOGO: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/Appicon.png',
+                PLAYER: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/Player.png',
+                BULLET: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/Bullet.png',
+                LOGO_PIECE_1: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/b3bfa7bcaf476c32564febc5d5852902117ca9d0/p1.png',
+                LOGO_PIECE_2: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/b3bfa7bcaf476c32564febc5d5852902117ca9d0/p2.png',
+                LOGO_PIECE_3: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/b3bfa7bcaf476c32564febc5d5852902117ca9d0/p3.png',
+                LOGO_PIECE_4: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/b3bfa7bcaf476c32564febc5d5852902117ca9d0/p4.png',
+                LOGO_PIECE_5: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/b3bfa7bcaf476c32564febc5d5852902117ca9d0/p5.png',
+                LOGO_PIECE_6: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/b3bfa7bcaf476c32564febc5d5852902117ca9d0/p6.png',
+                LOGO_PIECE_7: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/b3bfa7bcaf476c32564febc5d5852902117ca9d0/p7.png',
+                LOGO_PIECE_8: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/b3bfa7bcaf476c32564febc5d5852902117ca9d0/p8.png',
+                LOGO_PIECE_9: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/b3bfa7bcaf476c32564febc5d5852902117ca9d0/p9.png',
+                ENEMY_BULLET: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/opponentBullet.png',
+                ENEMY_ORACLE: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/sticker1.png',
+                ENEMY_BRIDGE: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/sticker2.png',
+                ENEMY_CHAIN: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/sticker3.png',
+                ENEMY_VALIDATOR: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/sticker4.png',
+                ENEMY_MEV_BOT: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/sticker5.png',
+                ENEMY_SILO: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/sticker6.png',
+                ENEMY_RUG_PULL: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/sticker7.png',
+                BOSS_ENEMY: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/Boss.png',
+                POWERUP_SHIELD: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/shield.png',
+                POWERUP_RAPID_FIRE: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/rapidFire.png',
+                POWERUP_SCORE_BOOST: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/scoreBoost.png',
+                POWERUP_BOMB: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/bomb.png',
+                POWERUP_CLONE_ATTACK: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/f5af9b23abf20edcdf600bb8c542bb8b093e88c8/clone.png',
+                MEME_LOW_SCORE: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/scorebelow100.png',
+                MEME_MID_SCORE: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/midscore.png',
+                MEME_HIGH_SCORE: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/highscore.png',
+                MEME_BULLET_DEATH: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/a6817153c228b516f7e7638fe6604e0970a6e1d7/BulletKilled.png',
+                EMOJI_CRYING: 'https://raw.githubusercontent.com/0xilhan/RialoBlast/f5af9b23abf20edcdf600bb8c542bb8b093e88c8/crying.png', // Crying emoji image
             };
             Object.keys(ASSETS).forEach(key => { 
                 const img = new Image(); 
@@ -438,7 +447,7 @@
                     delete this.powerUpTimers[type]; 
                 }, duration) }; playSound('powerup'); 
             } 
-            takeHit(cause) { if (this.shieldActive) { this.shieldHealth--; if (this.shieldHealth <= 0) this.shieldActive = false; } else { handleDeath(cause); } playSound('playerHit'); triggerScreenShake(12, 20); gameContainer.style.boxShadow = '0 0 30px #ff0000, inset 0 0 20px #ff0000'; setTimeout(() => gameContainer.style.boxShadow = '0 0 15px rgba(79, 70, 229, 0.5)', 200); } 
+            takeHit(cause) { if (this.shieldActive) { this.shieldHealth--; if (this.shieldHealth <= 0) this.shieldActive = false; } else { handleDeath(cause); } playSound('playerHit'); triggerScreenShake(12, 20); gameContainer.style.boxShadow = '0 0 30px #ff0000, inset 0 0 20px #ff0000'; setTimeout(() => gameContainer.style.boxShadow = '0 0 15px rgba(169, 221, 211, 0.5)', 200); } 
         }
         class Bullet extends GameObject { constructor(x, y, velocity) { super(x, y); this.velocity = velocity; this.radius = 8; this.image = preloadedImages.BULLET; this.alpha = 1; this.trail = []; } draw() { this.trail.forEach((p, i) => { ctx.save(); ctx.globalAlpha = (i / this.trail.length) * 0.5; ctx.drawImage(this.image, p.x - this.radius, p.y - this.radius, this.radius * 2, this.radius * 2); ctx.restore(); }); ctx.save(); ctx.globalAlpha = this.alpha; ctx.drawImage(this.image, this.x - this.radius, this.y - this.radius, this.radius * 2, this.radius * 2); ctx.restore(); } update() { this.trail.push({x: this.x, y: this.y}); if (this.trail.length > 5) this.trail.shift(); super.update(); this.alpha -= 0.01; } }
         class EnemyBullet extends GameObject { constructor(x, y, velocity) { super(x, y); this.velocity = velocity; this.radius = 10; this.image = preloadedImages.ENEMY_BULLET; } draw() { ctx.drawImage(this.image, this.x - this.radius, this.y - this.radius, this.radius * 2, this.radius * 2); } }
@@ -944,7 +953,7 @@
                 const piece = document.createElement('div');
                 piece.className = 'logo-piece';
                 piece.id = `logo-piece-${i}`;
-                piece.style.backgroundImage = `url(${ASSETS.BULLET})`;
+                piece.style.backgroundImage = `url(${ASSETS['LOGO_PIECE_' + (i+1)]})`;
                 const x = i % 3;
                 const y = Math.floor(i / 3);
                 piece.style.backgroundPosition = `${x * 50}% ${y * 50}%`;
@@ -973,8 +982,8 @@
                 piece.className = 'logo-piece';
                 if (i < completedLevels - 1) {
                     piece.classList.add('unlocked');
+                    piece.style.backgroundImage = `url(${ASSETS['LOGO_PIECE_' + (i+1)]})`;
                 }
-                piece.style.backgroundImage = `url(${ASSETS.BULLET})`;
                 const x = i % 3;
                 const y = Math.floor(i / 3);
                 piece.style.backgroundPosition = `${x * 50}% ${y * 50}%`;
