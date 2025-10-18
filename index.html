@@ -19,8 +19,8 @@
             background-color: #0a0a1a;
             cursor: crosshair;
             border-radius: 0.5rem;
-            border: 2px solid #3a3a8a;
-            box-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
+            border: 2px solid #2a6a5d;
+            box-shadow: 0 0 15px rgba(169, 221, 211, 0.5);
             transition: transform 0.1s ease-out;
         }
         .game-ui-overlay {
@@ -33,45 +33,45 @@
         }
         .modal {
             background-color: rgba(10, 10, 26, 0.95);
-            border: 2px solid #3a3a8a;
+            border: 2px solid #2a6a5d;
             pointer-events: all;
-            box-shadow: 0 0 20px rgba(79, 70, 229, 0.7);
+            box-shadow: 0 0 20px rgba(169, 221, 211, 0.7);
         }
         .button, .settings-btn {
-            background-color: #4f46e5;
-            color: white;
+            background-color: #3d9a8c;
+            color: #e8e3d5;
             padding: 0.75rem 1.5rem;
             border-radius: 0.5rem;
             font-weight: bold;
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.2s ease-in-out;
-            border: 2px solid #6366f1;
-            box-shadow: 0 0 10px #4f46e5, 0 0 5px #4f46e5 inset, 0 0 15px #4f46e5;
-            text-shadow: 0 0 5px white;
+            border: 2px solid #5bc0ac;
+            box-shadow: 0 0 10px #3d9a8c, 0 0 5px #3d9a8c inset, 0 0 15px #3d9a8c;
+            text-shadow: 0 0 5px #e8e3d5;
         }
         .button:hover, .settings-btn:hover {
-            background-color: #6366f1;
+            background-color: #5bc0ac;
             transform: translateY(-2px);
-            box-shadow: 0 0 15px #6366f1, 0 0 10px #6366f1 inset, 0 0 25px #6366f1;
+            box-shadow: 0 0 15px #5bc0ac, 0 0 10px #5bc0ac inset, 0 0 25px #5bc0ac;
         }
         .button:disabled {
-            background-color: #312e81;
+            background-color: #2a6a5d;
             cursor: not-allowed;
             box-shadow: none;
-            color: #a5b4fc;
+            color: #85b8af;
         }
-        .score-text { text-shadow: 0 0 3px #fff, 0 0 8px #6366f1; }
+        .score-text { text-shadow: 0 0 3px #fff, 0 0 8px #a9ddd3; }
         #xpBar { transition: width 0.3s ease-out; }
         .helper-card { transition: all 0.2s ease-in-out; }
         .helper-card:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 0 25px rgba(16, 185, 129, 0.7); border-color: #10b981; }
         #reviveModal {
             background: radial-gradient(ellipse at center, rgba(10, 40, 20, 0.95) 0%, rgba(10, 10, 26, 0.98) 70%);
-            border-color: #00ff8a;
-            animation: pulse-green 1.5s infinite;
+            border-color: #a9ddd3;
+            animation: pulse-teal 1.5s infinite;
         }
-        @keyframes pulse-green { 0% { box-shadow: 0 0 20px rgba(0, 255, 138, 0.4); } 50% { box-shadow: 0 0 35px rgba(0, 255, 138, 0.8); } 100% { box-shadow: 0 0 20px rgba(0, 255, 138, 0.4); } }
-        .palpitating-heart { width: 100px; height: 100px; color: #00ff8a; animation: palpitation 0.7s infinite; filter: drop-shadow(0 0 15px rgba(0, 255, 138, 0.8)); }
+        @keyframes pulse-teal { 0% { box-shadow: 0 0 20px rgba(169, 221, 211, 0.4); } 50% { box-shadow: 0 0 35px rgba(169, 221, 211, 0.8); } 100% { box-shadow: 0 0 20px rgba(169, 221, 211, 0.4); } }
+        .palpitating-heart { width: 100px; height: 100px; color: #a9ddd3; animation: palpitation 0.7s infinite; filter: drop-shadow(0 0 15px rgba(169, 221, 211, 0.8)); }
         @keyframes palpitation { 0% { transform: scale(1); } 20% { transform: scale(1.25); } 40% { transform: scale(1); } 60% { transform: scale(1.15); } 100% { transform: scale(1); } }
         
         #intro-logo { animation: fade-in 2.5s ease-out forwards; }
@@ -113,8 +113,8 @@
             align-items: center;
             justify-content: center;
             font-size: 80px;
-            color: #00f6ff;
-            text-shadow: 0 0 20px #00f6ff;
+            color: #a9ddd3;
+            text-shadow: 0 0 20px #a9ddd3;
             animation: pulse-lock 2s infinite;
             transition: opacity 0.5s;
         }
@@ -128,7 +128,7 @@
 </head>
 <body class="flex items-center justify-center h-screen m-0">
 
-    <div id="game-container" class="relative w-full max-w-sm aspect-[9/16] shadow-2xl shadow-indigo-500/50 overflow-hidden rounded-lg">
+    <div id="game-container" class="relative w-full max-w-sm aspect-[9/16] shadow-2xl shadow-teal-500/50 overflow-hidden rounded-lg">
         <canvas id="gameCanvas"></canvas>
 
         <!-- Intro/Logo Reveal --><div id="introModal" class="modal absolute inset-0 flex items-center justify-center text-center p-8 rounded-lg hidden bg-transparent border-none shadow-none">
@@ -139,8 +139,8 @@
             <div class="flex justify-between items-start text-white">
                 <div class="text-left">
                     <span id="levelEl" class="font-bold score-text text-xl">LVL: 1</span>
-                    <div id="xpBarContainer" class="w-24 h-2 bg-gray-700/50 rounded-full mt-1 border border-indigo-400/50 backdrop-blur-sm">
-                        <div id="xpBar" class="h-full bg-green-400 rounded-full"></div>
+                    <div id="xpBarContainer" class="w-24 h-2 bg-gray-700/50 rounded-full mt-1 border border-teal-400/50 backdrop-blur-sm">
+                        <div id="xpBar" class="h-full bg-teal-400 rounded-full"></div>
                     </div>
                 </div>
                 <div class="text-right">
@@ -160,7 +160,7 @@
         </div>
 
         <!-- Main Menu Modal --><div id="mainMenuModal" class="modal absolute inset-0 flex flex-col items-center justify-around text-center p-8 rounded-lg hidden">
-            <h2 class="text-8xl font-black text-indigo-300 score-text">RIALO</h2>
+            <h2 class="text-8xl font-black text-teal-300 score-text">RIALO</h2>
              <div class="flex flex-col space-y-4 w-48">
                 <button id="newGameBtn" class="button">New Game</button>
                 <button id="resumeBtn" class="button">Resume</button>
@@ -170,7 +170,7 @@
         </div>
 
         <!-- Settings Modal --><div id="settingsModal" class="modal absolute inset-0 flex-col items-center justify-center text-center p-8 rounded-lg hidden space-y-6">
-            <h2 class="text-4xl font-bold text-indigo-300">Settings</h2>
+            <h2 class="text-4xl font-bold text-teal-300">Settings</h2>
             <div class="flex items-center justify-between w-64">
                 <span class="text-xl">Music</span>
                 <button id="musicToggleBtn" class="settings-btn w-24">ON</button>
@@ -234,7 +234,7 @@
         </div>
 
         <!-- Pause Modal --><div id="pauseModal" class="modal absolute inset-0 flex-col items-center justify-center text-center p-8 rounded-lg hidden bg-black/70 backdrop-blur-sm">
-             <h2 class="text-5xl font-bold text-indigo-300 mb-8">PAUSED</h2>
+             <h2 class="text-5xl font-bold text-teal-300 mb-8">PAUSED</h2>
              <button id="resumeGameBtn" class="button">Resume</button>
         </div>
         
@@ -263,8 +263,8 @@
         </div>
 
         <!-- Game Over Modal --><div id="gameOverModal" class="modal absolute inset-0 flex flex-col items-center justify-around text-center p-6 rounded-lg hidden">
-            <h2 class="text-5xl font-bold neon-text">MISSION FAILED</h2>
-            <p class="text-2xl score-text">Final Score: <span id="finalScoreEl" class="text-indigo-400 font-bold">0</span></p>
+            <h2 class="text-5xl font-bold text-red-500 score-text">MISSION FAILED</h2>
+            <p class="text-2xl score-text">Final Score: <span id="finalScoreEl" class="text-teal-400 font-bold">0</span></p>
             <div class="flex flex-col items-center justify-center w-full">
                 <p id="achievement-text" class="text-lg text-amber-300 mb-2 font-bold px-2"></p>
                 <img id="achievement-meme" src="" class="max-h-36 rounded-lg hidden" alt="Achievement Meme"/>
@@ -671,7 +671,7 @@
                             playSound('combo', COMBO_NOTES[Math.min(combo, COMBO_NOTES.length - 1)]);
                             const points = enemy.points * (1 + (combo * 0.1)) * scoreMultiplier;
                             score += points; totalScore += points; player.addXP(enemy.points);
-                            floatingTexts.push(new FloatingText(enemy.x, enemy.y, `+${Math.round(points)}`, '#4ade80'));
+                            floatingTexts.push(new FloatingText(enemy.x, enemy.y, `+${Math.round(points)}`, '#a9ddd3'));
                             if (Math.random() < 0.20) { powerUps.push(new PowerUp(enemy.x, enemy.y, POWERUP_TYPES[Math.floor(Math.random() * POWERUP_TYPES.length)])); }
                             enemies.splice(eIndex, 1); createExplosion(enemy); triggerScreenShake(5, 10);
                         }
